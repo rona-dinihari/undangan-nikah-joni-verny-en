@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="ribbon"><span>Demo</span></div>
+
     <!-- QR Button -->
     <button class="qr-btn" data-bs-toggle="modal" data-bs-target="#qrModal">
       <i class="fas fa-qrcode"></i>
@@ -163,8 +165,10 @@
                   class="bank-logo"
                 />
               </div>
-              <h5 class="mb-1">BCA: 12374892</h5>
-              <p class="text-muted">A/N Joni Hamarlambang</p>
+              <h5 class="mb-1">BCA: <span class="strike">12374892</span></h5>
+              <p class="text-muted">
+                <span class="strike">A/N Joni Hamarlambang</span>
+              </p>
               <button class="btn btn-pink mt-3" id="btnCopy">
                 <i class="fas fa-copy me-2"></i> Salin Nomor Rekening
               </button>
