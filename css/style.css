@@ -1,0 +1,226 @@
+:root {
+  --pastel-pink: #f8bbd0;
+  --pastel-blue: #bbdefb;
+  --dark-pink: #e91e63;
+  --dark-blue: #1976d2;
+  --white-trans: rgba(255, 255, 255, 0.8);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+.cursive {
+  font-family: "Great Vibes", cursive;
+}
+
+/* --- Hero Carousel --- */
+#home {
+  height: 100vh;
+  position: relative;
+}
+.carousel-item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+.hero-title {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Hero slide background images (moved from inline styles) */
+.hero-slide1 {
+  background-image: url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1920");
+}
+.hero-slide2 {
+  background-image: url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1920");
+}
+
+/* --- Countdown --- */
+.countdown-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 2rem;
+}
+.countdown-item {
+  background: var(--white-trans);
+  backdrop-filter: blur(5px);
+  color: var(--dark-pink);
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 80px;
+}
+.countdown-item span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.countdown-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* --- Parallax Sections --- */
+.parallax {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.overlay-pink {
+  background: rgba(248, 187, 208, 0.7);
+}
+.overlay-blue {
+  background: rgba(187, 222, 251, 0.7);
+}
+
+/* background images for parallax sections (moved from inline styles) */
+#mempelai {
+  background-image: url("https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=1920");
+}
+#acara {
+  background-image: url("https://images.unsplash.com/photo-1465495910483-0d674115f07a?auto=format&fit=crop&q=80&w=1920");
+}
+
+/* --- Navigation --- */
+.floating-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 25px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  gap: 20px;
+}
+.nav-link {
+  color: var(--dark-pink);
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+.nav-link:hover {
+  color: var(--dark-blue);
+}
+
+/* --- QR Button --- */
+.qr-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: var(--dark-pink);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+/* --- Sections Style --- */
+.section-padding {
+  padding: 80px 0;
+}
+.card-custom {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.btn-pink {
+  background-color: var(--dark-pink);
+  color: white;
+  border-radius: 25px;
+  padding: 10px 25px;
+}
+.btn-pink:hover {
+  background-color: #c2185b;
+  color: white;
+}
+
+/* --- Chat UI --- */
+.chat-box {
+  height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 15px;
+}
+.bubble {
+  max-width: 80%;
+  padding: 12px 18px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  clear: both;
+  animation: fadeIn 0.5s ease;
+}
+.bubble-blue {
+  background: var(--pastel-blue);
+  float: left;
+  color: #333;
+}
+.bubble-pink {
+  background: var(--pastel-pink);
+  float: right;
+  color: #333;
+}
+.bubble-name {
+  font-weight: bold;
+  font-size: 0.85rem;
+  display: block;
+}
+
+/* --- Toast --- */
+.toast-container {
+  z-index: 2000;
+}
+
+/* bank logo height (moved from inline) */
+.bank-logo {
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .countdown-container {
+    gap: 8px;
+  }
+  .countdown-item {
+    min-width: 65px;
+    padding: 10px;
+  }
+}

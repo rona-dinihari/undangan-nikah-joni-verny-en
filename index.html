@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Wedding of Joni & Verny</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- QR Button -->
+    <button class="qr-btn" data-bs-toggle="modal" data-bs-target="#qrModal">
+      <i class="fas fa-qrcode"></i>
+    </button>
+
+    <!-- Floating Nav -->
+    <nav class="floating-nav">
+      <a href="#home" class="nav-link"><i class="fas fa-home"></i></a>
+      <a href="#mempelai" class="nav-link"><i class="fas fa-heart"></i></a>
+      <a href="#acara" class="nav-link"><i class="fas fa-calendar-alt"></i></a>
+      <a href="#gift" class="nav-link"><i class="fas fa-gift"></i></a>
+      <a href="#ucapan" class="nav-link"><i class="fas fa-comment-dots"></i></a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+      <div
+        id="heroCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active hero-slide1"></div>
+          <div class="carousel-item hero-slide2"></div>
+        </div>
+      </div>
+      <div class="hero-overlay">
+        <p class="mb-0 text-uppercase tracking-widest">The Wedding of</p>
+        <h1 class="hero-title">Joni & Verny</h1>
+        <div class="countdown-container" id="timer">
+          <div class="countdown-item">
+            <span id="days">00</span>
+            <div class="countdown-label">Hari</div>
+          </div>
+          <div class="countdown-item">
+            <span id="hours">00</span>
+            <div class="countdown-label">Jam</div>
+          </div>
+          <div class="countdown-item">
+            <span id="minutes">00</span>
+            <div class="countdown-label">Menit</div>
+          </div>
+          <div class="countdown-item">
+            <span id="seconds">00</span>
+            <div class="countdown-label">Detik</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mempelai Section -->
+    <section id="mempelai" class="parallax overlay-pink">
+      <div class="container text-center py-5">
+        <div class="row align-items-center">
+          <div class="col-md-5 animate__animated animate__fadeInLeft">
+            <h2 class="display-3 mb-3">Joni Hamarlambang</h2>
+            <p class="lead">Putra dari Bapak Suherman & Ibu Fatimah</p>
+          </div>
+          <div class="col-md-2 my-4">
+            <h1 class="cursive display-1">&</h1>
+          </div>
+          <div class="col-md-5 animate__animated animate__fadeInRight">
+            <h2 class="display-3 mb-3">Verny Anastasia</h2>
+            <p class="lead">Putri dari Bapak Wijaya & Ibu Ratna</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Acara Section -->
+    <section id="acara" class="parallax overlay-blue">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card card-custom p-4 p-md-5 text-center">
+              <h2 class="mb-5 text-primary">Detail Acara</h2>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="p-4 border rounded-4 bg-light">
+                    <i class="fas fa-ring fs-1 text-primary mb-3"></i>
+                    <h4>Akad Nikah</h4>
+                    <p>09:00 - 10:30 WIB</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-4 border rounded-4 bg-light">
+                    <i class="fas fa-glass-cheers fs-1 text-primary mb-3"></i>
+                    <h4>Resepsi</h4>
+                    <p>11:00 WIB - Selesai</p>
+                  </div>
+                </div>
+                <div class="col-12 mt-4">
+                  <a
+                    href="https://maps.google.com"
+                    target="_blank"
+                    class="text-decoration-none"
+                  >
+                    <div
+                      class="p-4 border rounded-4 bg-white shadow-sm hover-shadow transition"
+                    >
+                      <i
+                        class="fas fa-map-marker-alt fs-1 text-danger mb-3"
+                      ></i>
+                      <h5>Lokasi Acara</h5>
+                      <p>Jalan Maju Mundur 12, Surabaya</p>
+                      <span class="btn btn-outline-primary btn-sm"
+                        >Buka Navigasi</span
+                      >
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gift Section -->
+    <section id="gift" class="section-padding bg-light">
+      <div class="container text-center">
+        <h2 class="mb-5">Wedding Gift</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card card-custom p-4">
+              <div
+                class="d-flex align-items-center justify-content-center mb-3"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg"
+                  alt="BCA"
+                  class="bank-logo"
+                />
+              </div>
+              <h5 class="mb-1">BCA: 12374892</h5>
+              <p class="text-muted">A/N Joni Hamarlambang</p>
+              <button class="btn btn-pink mt-3" id="btnCopy">
+                <i class="fas fa-copy me-2"></i> Salin Nomor Rekening
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ucapan Section -->
+    <section id="ucapan" class="section-padding bg-white">
+      <div class="container">
+        <h2 class="text-center mb-5">Kirimkan Ucapan & Doa</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form id="wishForm" class="mb-5">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  id="guestName"
+                  class="form-control"
+                  placeholder="Nama Anda"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  id="guestMsg"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Tulis ucapan..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-pink w-100">
+                Kirim Ucapan
+              </button>
+            </form>
+
+            <div class="chat-box shadow-inner" id="chatDisplay">
+              <!-- Mock initial messages -->
+              <div class="bubble bubble-blue">
+                <span class="bubble-name">Siska Putri</span>
+                Selamat ya Joni dan Verny! Semoga bahagia selamanya.
+              </div>
+              <div class="bubble bubble-blue">
+                <span class="bubble-name">Andi Wijaya</span>
+                Lancar sampai hari H bro!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+      <p class="cursive fs-2 mb-0">Joni & Verny</p>
+      <p class="small text-muted">2026 Wedding Invitation</p>
+    </footer>
+
+    <!-- QR Modal -->
+    <div class="modal fade" id="qrModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-4 rounded-4">
+          <div class="modal-header border-0 pb-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h3 class="mb-3">Check-in QR Code</h3>
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=JoniVernyWedding"
+              alt="QR"
+              class="img-fluid mb-3"
+            />
+            <p class="text-muted">
+              Tunjukkan QR code ini kepada petugas di lokasi acara untuk akses
+              masuk.
+            </p>
+          </div>
+          <div class="modal-footer border-0 justify-content-center">
+            <button class="btn btn-pink" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast align-items-center text-white bg-primary border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body" id="toastMsg">Berhasil!</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
