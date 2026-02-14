@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="id">
   <head>
+    <!-- Prevent browser caching / force revalidation -->
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Wedding of Joni & Verny</title>
@@ -283,6 +290,36 @@
     </div>
 
     <!-- Scripts -->
+    <!-- Force cache-busting reload when page is restored from bfcache / back-forward -->
+    <!-- Keep it as inline! -->
+    <script>
+      (function () {
+        function bustCacheOnce() {
+          if (sessionStorage.getItem("cache_busted")) return;
+          sessionStorage.setItem("cache_busted", "1");
+          var base =
+            location.protocol + "//" + location.host + location.pathname;
+          var hash = location.hash || "";
+          var sep = location.search ? "&" : "?";
+          var newUrl = base + location.search + sep + "_=" + Date.now() + hash;
+          // Replace current entry to avoid history bloat
+          location.replace(newUrl);
+        }
+
+        window.addEventListener("pageshow", function (e) {
+          var navEntries =
+            (performance.getEntriesByType &&
+              performance.getEntriesByType("navigation")) ||
+            [];
+          var navType =
+            (navEntries[0] && navEntries[0].type) ||
+            (performance.navigation && performance.navigation.type);
+          if (e.persisted || navType === "back_forward" || navType === 2) {
+            bustCacheOnce();
+          }
+        });
+      })();
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
