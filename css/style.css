@@ -24,10 +24,18 @@ h3,
   height: 100vh;
   position: relative;
 }
-.carousel-item {
+/* ensure carousel fills viewport and items are visible */
+.carousel,
+.carousel-inner {
   height: 100vh;
+}
+.carousel-item {
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  display: block !important; /* ensure visible on initial load across browsers */
+  z-index: 1;
 }
 .hero-overlay {
   position: absolute;
