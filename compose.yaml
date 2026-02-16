@@ -1,0 +1,14 @@
+name: undangan-nikah-joni-verny-en
+
+services:
+  home:
+    image: huedawn/php-ext:latest-apache
+    volumes:
+      - type: bind
+        source: "./public"
+        target: /var/www/html
+      - type: bind
+        source: "./etc"
+        target: /etc/apache2/conf-available
+    ports:
+      - "80:80"
